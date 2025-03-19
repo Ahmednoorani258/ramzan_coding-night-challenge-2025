@@ -13,7 +13,8 @@ model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 @cl.on_chat_start
 async def start():
     await cl.Message(content = "Hello! How can I help you today?").send()
-    
+
+# 
 @cl.on_message
 async def main(message:cl.Message):
     prompt = message.content
